@@ -1,0 +1,210 @@
+/* Importar fuentes */
+@font-face {
+    font-family: 'Roboto';
+    src: url('../assets/fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../assets/fonts/Roboto/Roboto-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../assets/fonts/Roboto/Roboto-Medium.ttf') format('truetype');
+    font-weight: medium;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PMarker';
+    src: url('../assets/fonts/Permanent_Marker/PermanentMarker-Regular.ttf') format('truetype');
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navegación */
+nav {
+    background-color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;  /* Esto alineará los elementos al principio y al final */
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Asegúrate de que ocupe todo el ancho */
+}
+
+.logo {
+    height: 70px;
+    width: auto;
+    display: flex;
+    justify-content: left;
+    padding-left: 100px;
+}
+
+.branding {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.name {
+    font-family: 'PMarker', sans-serif;
+    font-size: 30px;
+    color: #000000;
+    font-weight: normal;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #8b8b8b;
+}
+
+.separator {
+    font-size: 20px;
+    color: #8b8b8b;
+    margin-bottom: 3px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #8b8b8b;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #000000;
+}
+
+.right-links {
+    margin-left: auto; /* Esto moverá los enlaces a la derecha */
+    display: flex;
+    gap: 20px; /* Puedes ajustar el espacio entre los enlaces */
+    padding-right: 100px;
+}
+
+.right-links a {
+    color: #8b8b8b;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.right-links a:hover {
+    font-weight: normal;
+}
+
+
+/* preheader */
+.preheader {
+    position: relative;
+    text-align: left; /* Cambiado a left para alinear el contenido a la izquierda */
+    padding: 50px 20px;
+}
+
+.preheader h1, .preheader h2 {
+    position: absolute;
+    left: 20px; /* Alinea los títulos a la izquierda con un margen */
+    color: #ffffff;
+    font-weight: bold;
+    margin-left: 50px;
+}
+
+.preheader h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    top: 65%; /* Centra el h1 verticalmente */
+}
+
+.preheader h2 {
+    font-size: 40px;
+    margin-bottom: 5px;
+    top: 60%; /* Mueve el h2 ligeramente hacia arriba */
+}
+
+.preheader img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Content */
+.content {
+    display: flex;
+    flex-direction: row; /* Coloca el video y el texto en una fila */
+    align-items: center; /* Alinea verticalmente los elementos */
+    justify-content: center; /* Centra horizontalmente los elementos */
+    gap: 10px; /* Espacio entre el texto y el video */
+    text-align: center; /* Centra el texto dentro de su contenedor */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    margin: 0 auto; /* Centra el contenedor en la página */
+}
+
+.text-container {
+    padding-left: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el texto verticalmente dentro del contenedor */
+}
+
+.video-container {
+    margin-top: 50px;
+    flex: 1; /* Permite que el video ocupe el espacio restante */
+    max-width: 100%;
+    display: flex;
+    justify-content: center; /* Centra el video horizontalmente */
+}
+
+.video-container iframe {
+    width: 854px;
+    height: 480px;
+    max-width: 100%;
+}
+
+/* About Section */
+.about {
+    margin-top: 100px;
+    margin-right: auto; 
+    margin-left: auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 36px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.about p {
+    font-size: 18px;
+    max-width: 600px;
+    line-height: 1.6;
+}
