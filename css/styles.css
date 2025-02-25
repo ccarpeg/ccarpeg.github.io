@@ -35,12 +35,21 @@ body {
 }
 
 /* Navegación */
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Agrega una sombra para resaltar la barra */
+}
+
 nav {
     background-color: #ffffff;
     padding: 20px 0;
     text-align: center;
     display: flex;
-    justify-content: space-between;  /* Esto alineará los elementos al principio y al final */
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -51,7 +60,7 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    width: 100%; /* Asegúrate de que ocupe todo el ancho */
+    width: 100%; 
 }
 
 .logo {
@@ -102,10 +111,14 @@ nav ul li a:hover {
     color: #000000;
 }
 
+nav ul li a.active {
+    color: #000000;
+}
+
 .right-links {
-    margin-left: auto; /* Esto moverá los enlaces a la derecha */
+    margin-left: auto; 
     display: flex;
-    gap: 20px; /* Puedes ajustar el espacio entre los enlaces */
+    gap: 20px;
     padding-right: 100px;
 }
 
@@ -124,28 +137,32 @@ nav ul li a:hover {
 /* preheader */
 .preheader {
     position: relative;
-    text-align: left; /* Cambiado a left para alinear el contenido a la izquierda */
+    text-align: left; 
     padding: 50px 20px;
 }
 
 .preheader h1, .preheader h2 {
     position: absolute;
-    left: 20px; /* Alinea los títulos a la izquierda con un margen */
+    left: 20px; 
     color: #ffffff;
     font-weight: bold;
     margin-left: 50px;
 }
 
 .preheader h1 {
-    font-size: 60px;
+    font-size: 80px;
+    font-family: Calibri, sans-serif;
+    font-weight: bold;
     margin-bottom: 20px;
-    top: 65%; /* Centra el h1 verticalmente */
+    top: 60%; 
 }
 
 .preheader h2 {
-    font-size: 40px;
+    font-size: 60px;
+    font-family: Calibri, sans-serif;
+    font-weight: lighter; 
     margin-bottom: 5px;
-    top: 60%; /* Mueve el h2 ligeramente hacia arriba */
+    top: 54%;
 }
 
 .preheader img {
@@ -158,34 +175,62 @@ nav ul li a:hover {
 /* Content */
 .content {
     display: flex;
-    flex-direction: row; /* Coloca el video y el texto en una fila */
-    align-items: center; /* Alinea verticalmente los elementos */
-    justify-content: center; /* Centra horizontalmente los elementos */
-    gap: 10px; /* Espacio entre el texto y el video */
-    text-align: center; /* Centra el texto dentro de su contenedor */
-    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
-    margin: 0 auto; /* Centra el contenedor en la página */
+    flex-direction: row;
+    align-items: center; 
+    justify-content: center; 
+    gap: 10px; 
+    text-align: center; 
+    width: 100%; 
+    margin: 0 auto;
 }
 
 .text-container {
     padding-left: 300px;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centra el texto verticalmente dentro del contenedor */
+    justify-content: center;
 }
 
 .video-container {
     margin-top: 50px;
-    flex: 1; /* Permite que el video ocupe el espacio restante */
+    flex: 1; 
     max-width: 100%;
     display: flex;
-    justify-content: center; /* Centra el video horizontalmente */
+    justify-content: center; 
 }
 
 .video-container iframe {
     width: 854px;
     height: 480px;
     max-width: 100%;
+}
+
+/* Gesture Drawings */
+.gdrawings {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.gdrawings h2{
+    font-size: 36px;
+}
+
+.gallery {
+    display: flex;
+    gap: 100px;
+}
+
+.thumbnails {
+    width: 300px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.thumbnails:hover {
+    transform: scale(1.2);
 }
 
 /* About Section */
@@ -207,4 +252,58 @@ nav ul li a:hover {
     font-size: 18px;
     max-width: 600px;
     line-height: 1.6;
+}
+
+/* RRSS */
+.rrss {
+    margin-top: 80px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+.rrss h3 {
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.social-icons {
+    margin-right: 100px;
+    display: flex;
+    gap: 10px; 
+}
+
+.social-icons a img {
+    width: 30px;
+    height: auto;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.social-icons a img:hover {
+    opacity: 0.7; 
+}
+
+/* Button */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    color: #1a1a1a;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0; 
+    visibility: hidden; 
+    transition: opacity 0.3s ease-in-out;
+}
+
+#scrollTopBtn:hover {
+    background-color: #555;
+    opacity: 0.8;
 }
