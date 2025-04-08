@@ -20,6 +20,7 @@
     font-style: normal;
 }
 
+
 @font-face {
     font-family: 'PMarker';
     src: url('../assets/fonts/Permanent_Marker/PermanentMarker-Regular.ttf') format('truetype');
@@ -28,7 +29,7 @@
 /* Estilos generales */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #1a1a1a;
+    background-color: #f8f8f8;
     color: #f0f0f0;
     margin: 0;
     padding: 0;
@@ -138,7 +139,6 @@ nav ul li a.active {
 .preheader {
     position: relative;
     text-align: left; 
-    padding: 50px 20px;
 }
 
 .preheader h1, .preheader h2 {
@@ -168,8 +168,64 @@ nav ul li a.active {
 .preheader img {
     max-width: 100%;
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Intro */
+.main-title {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: medium;
+    color: #1a1a1a;
+    text-align: center;
+}
+
+.main-title h1 {
+    margin-top: 40px;
+}
+
+.intro {
+    margin-left: 20px;
+    margin-bottom: 80px;
+
+    /* dos columnas: una para el texto y otra para el video */
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;             
+    align-items: start;   
+}
+
+/* Contenedor que agrupa el texto */
+.intro-text {
+    display: flex;
+    flex-direction: column;  
+    gap: 2px;    
+    margin-left: 200px;          
+}
+
+.intro-text h2 {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #1a1a1a;
+    margin-top: 100px;
+}
+
+.intro-text h3 {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    color: #1a1a1a;
+}
+
+.intro-text img {
+    width: 50px;
+    height: auto;
+}
+
+.intro img.setup{
+    max-width: 500px; /* o el tamaño que prefieras */
+    height: auto;
+    margin-right: 250px;
 }
 
 /* Content */
@@ -189,6 +245,15 @@ nav ul li a.active {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    color: #1a1a1a;
+}
+
+.text-container h3{
+    font-size: 16px;
+    color: #7a7a7a;
 }
 
 .video-container {
@@ -216,6 +281,7 @@ nav ul li a.active {
 
 .gdrawings h2{
     font-size: 36px;
+    color: #1a1a1a;
 }
 
 .gallery {
@@ -227,10 +293,82 @@ nav ul li a.active {
     width: 300px;
     height: auto;
     transition: transform 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .thumbnails:hover {
     transform: scale(1.2);
+}
+
+/* Estilos del modal */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    display: block;
+}
+
+/* Botón de cerrar */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Botones de navegación */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    transform: translateY(-50%);
+    padding: 10px;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+.prev:hover, .next:hover {
+    color: #ddd;
+}
+
+/*Pass Ball*/
+.pass-ball {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;  
+    margin-top: 40px;    
+}
+
+.pass-ball h2 {
+    margin-top: 50px;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    color: #1a1a1a;
+}
+
+.pass-ball h2 .bold {
+    font-weight: bold;
 }
 
 /* About Section */
@@ -244,7 +382,7 @@ nav ul li a.active {
 
 .about h2 {
     font-size: 36px;
-    color: #ffffff;
+    color: #1a1a1a;
     font-weight: bold;
 }
 
@@ -275,15 +413,26 @@ nav ul li a.active {
     gap: 10px; 
 }
 
-.social-icons a img {
-    width: 30px;
-    height: auto;
-    transition: opacity 0.3s ease-in-out;
+.social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px; /* Ajusta el tamaño del fondo */
+    height: 40px;
+    background-color: #1a1a1a; /* Fondo oscuro */
+    border-radius: 50%; /* Para que sea un círculo */
+    transition: background-color 0.3s ease-in-out;
 }
 
-.social-icons a img:hover {
-    opacity: 0.7; 
+.social-icons a img {
+    width: 24px; /* Ajustamos el tamaño del icono dentro */
+    height: auto;
 }
+
+.social-icons a:hover {
+    background-color: #616161; /* Cambio sutil al pasar el mouse */
+}
+
 
 /* Button */
 #scrollTopBtn {
@@ -291,19 +440,29 @@ nav ul li a.active {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
+    width: 45px;
+    height: 45px;
     background-color: white;
-    color: #1a1a1a;
     border: none;
-    padding: 10px 15px;
-    font-size: 20px;
     border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     cursor: pointer;
-    opacity: 0; 
-    visibility: hidden; 
-    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s;
+    padding: 0;
+}
+
+#scrollTopBtn img {
+    width: 20px; /* Ajusta el tamaño del icono */
+    height: auto;
 }
 
 #scrollTopBtn:hover {
-    background-color: #555;
-    opacity: 0.8;
+    background-color: #f0f0f0;
 }
+
+

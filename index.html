@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Carlos Carpe</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/jpeg" href="assets/img/newPersonaje.jpg">
 </head>
 <body>
@@ -35,10 +35,48 @@
         </nav>
     </header>
 
+    <section class="main-title">
+        <h1>The Art of Carlos Carpe</h1>
+    </section>
+
+    <section class="intro">
+        <div class="intro-text">
+            <h2>Hi!</h2>
+            <h3>Thanks for stopping by my storytelling portfolio. <br> 
+                Here, you'll find a collection of my personal storytelling <br> 
+                projects, life gesture drawings, and artwork. <br> 
+                If you'd like to see more, feel free to check out my social media!
+            </h3>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/ccarpeg" target="_blank">
+                    <img src="assets/icons/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://www.youtube.com/channel/UCGIXPLZHtijytqyx97eXYtQ" target="_blank">
+                    <img src="assets/icons/youtube.png" alt="YouTube">
+                </a>
+                <a href="https://www.linkedin.com/in/carlos-carpe-b83908246/" target="_blank">
+                    <img src="assets/icons/linkedin.png" alt="LinkedIn">
+                </a>
+            </div>
+        </div>
+        
+        <img src="assets/img/PORTADA_SETUP3.png" class="setup" alt="setup">
+    </section>    
+
+    <hr style="width: 80%; margin: auto; border: 1px solid #1a1a1a;">
+
+    <section class="main-title">
+        <h1>PERSONAL STORY PORTFOLIO</h1>
+    </section>
+
     <section class="content" id="content">
         <div class="text-container">
-            <h2 class="title">"La Casa Encantada"</h2>
-            <h3 class="subtitle">2024</h3>
+            <h2 class="title">
+                <span class="bold">LA CASA ENCANTADA</span>  
+                | OCTUBRE 2024
+            </h2>
+            <h3 class="subtitle">Capítulo número 6 de la serie Experimental</h3>
+            <h3>Baseball cuenta la historia de alguien que, por su <br> cumpleaños, recibe un regalo de su deporte favorito.</h3>
         </div>
         <div class="video-container">
             <iframe 
@@ -54,41 +92,56 @@
     </section>
 
     <section class="gdrawings" id="gdrawings">
-        <h2>Gesture Drawings</h2>
         <div class="gallery">
-            <a href="assets/img/Clasitoons_Thumbnails.jpg" target="_blank">
-                <img src="assets/img/Clasitoons_Thumbnails.jpg" alt="thumbnails" class="thumbnails">
-            </a>
-            <a href="assets/img/Clasitoons_Conejo.jpg" target="_blank">
-                <img src="assets/img/Clasitoons_Conejo.jpg" alt="conejo" class="thumbnails">
-            </a>
-            <a href="assets/img/Clasitoons_Topo.jpg" target="_blank">
-                <img src="assets/img/Clasitoons_Topo.jpg" alt="topo" class="thumbnails">
-            </a>
+            <img src="assets/img/Clasitoons_Thumbnails.jpg" alt="thumbnails" class="thumbnails">
+            <img src="assets/img/Clasitoons_Conejo.jpg" alt="conejo" class="thumbnails">
+            <img src="assets/img/Clasitoons_Topo.jpg" alt="topo" class="thumbnails">
         </div>
     </section>
 
+    <section class="pass-ball">
+        <h2 class="title">
+            <span class="bold">PASA LA PELOTA</span>  
+            | ENERO 2025
+        </h2>
+        <div class="gallery">
+            <img src="assets/img/Pasa-la-pelota-1-1.jpg" alt="ball1" class="thumbnails">
+            <img src="assets/img/Pasa-la-pelota-1-2.jpg" alt="ball2" class="thumbnails">
+            <img src="assets/img/Pasa-la-pelota-1-3.jpg" alt="ball3" class="thumbnails">
+        </div>
+    </section>
+    
+    <!-- Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <span class="prev">&#10094;</span>
+        <img class="modal-content" id="modalImg">
+        <span class="next">&#10095;</span>
+    </div>
+    <!--
     <section class="about" id="about">
         <h2>About</h2>
         <p>(MI DESCRIPCION)</p>
-    </section>
+    </section> -->
 
     <section class="rrss">
         <h3>© Carlos Carpe Gómez</h3>
         <div class="social-icons">
             <a href="https://www.instagram.com/ccarpeg" target="_blank">
-                <img src="assets/img/icons/instagram.png" alt="Instagram">
+                <img src="assets/icons/instagram.png" alt="Instagram">
             </a>
             <a href="https://www.youtube.com/channel/UCGIXPLZHtijytqyx97eXYtQ" target="_blank">
-                <img src="assets/img/icons/youtube.png" alt="YouTube">
+                <img src="assets/icons/youtube.png" alt="YouTube">
             </a>
             <a href="https://www.linkedin.com/in/carlos-carpe-b83908246/" target="_blank">
-                <img src="assets/img/icons/linkedin.png" alt="LinkedIn">
+                <img src="assets/icons/linkedin.png" alt="LinkedIn">
             </a>
         </div>
     </section>
 
-    <button id="scrollTopBtn">↑</button>
+    <button id="scrollTopBtn">
+        <img src="assets/icons/up_black.png" alt="Subir" id="scrollTopIcon">
+    </button>
     <script src="js/script.js"></script>
 </body>
 </html>

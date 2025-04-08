@@ -1,5 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const scrollTopBtn = document.getElementById("scrollTopBtn");
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
+    const closeModal = document.querySelector(".close");
+    const prevBtn = document.querySelector(".prev");
+    const nextBtn = document.querySelector(".next");
+    const thumbnails = document.querySelectorAll(".thumbnails");
+
+    modal.style.display = "none";
+    let images = []; // Almacena las imágenes de la sección activa
+    let currentIndex = 0;
 
     window.addEventListener("scroll", function () {
         if (window.scrollY > 200) {
@@ -62,6 +71,69 @@ document.addEventListener("DOMContentLoaded", function () {
                 block: "start" // Alineación al inicio de la sección
             });
         });
+    });
+
+    function openModal(index, sectionImages) {
+        images = sectionImages;
+        currentIndex = index;
+        modalImg.src = images[currentIndex].src;
+        modal.style.display = "flex";
+        updateButtons();
+    }
+
+    // Función para actualizar la visibilidad de los botones de navegación
+    function updateButtons() {
+        prevBtn.style.display = currentIndex === 0 ? "none" : "block";
+        nextBtn.style.display = currentIndex === images.length - 1 ? "none" : "block";
+    }
+
+    // Evento para cada miniatura
+    thumbnails.forEach((img, index) => {
+        img.addEventListener("click", function () {
+            // Filtrar solo las imágenes de la misma sección
+            const section = img.closest(".gallery");
+            const sectionImages = [...section.querySelectorAll(".thumbnails")];
+            openModal(sectionImages.indexOf(img), sectionImages);
+        });
+    });
+
+    // Botón "anterior"
+    prevBtn.addEventListener("click", function () {
+        if (currentIndex > 0) {
+            currentIndex--;
+            modalImg.src = images[currentIndex].src;
+            updateButtons();
+        }
+    });
+
+    // Botón "siguiente"
+    nextBtn.addEventListener("click", function () {
+        if (currentIndex < images.length - 1) {
+            currentIndex++;
+            modalImg.src = images[currentIndex].src;
+            updateButtons();
+        }
+    });
+
+    // Cerrar modal
+    closeModal.addEventListener("click", function () {
+        modal.style.display = "none";
+    });
+
+    // Cerrar modal al hacer clic fuera de la imagen
+    modal.addEventListener("click", function (e) {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+
+    // Navegación con teclas del teclado
+    document.addEventListener("keydown", function (e) {
+        if (modal.style.display === "flex") {
+            if (e.key === "ArrowLeft") prevBtn.click();
+            if (e.key === "ArrowRight") nextBtn.click();
+            if (e.key === "Escape") modal.style.display = "none";
+        }
     });
 });
 
