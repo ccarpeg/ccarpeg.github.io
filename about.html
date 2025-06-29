@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlos Carpe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <section class="preheader">
+        <picture>
+            <source srcset="assets/img/Portada2Movil.jpg" media="(max-width: 768px)">
+            <img src="assets/img/Portada2.jpg" alt="Imagen de portada">
+        </picture>
+        <h2>The Art of</h2>
+        <h1>CARLOS CARPE</h1>
+    </section>
+
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <img src="assets/img/newPersonaje.jpg" alt="Logo" class="logo">
+                </li>
+                <li class="branding">
+                    <span class="name">Carlos Carpe</span>
+                    <span class="subtitle">Story Artist</span>
+                </li>
+                <!-- Botón hamburguesa para móvil -->
+                <li class="menu-toggle">
+                    <button id="hamburgerBtn" aria-label="Abrir menú">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    </button>
+                </li>
+                <div class="right-links">
+                    <li><a href="index.html#storyboard">STORYBOARDS</a></li>
+                    <a class="separator">|</a>
+                    <li><a href="index.html#gdrawings">GESTURE DRAWING</a></li>
+                    <a class="separator">|</a>
+                    <li><a href="#about" style="color: #000000">ABOUT</a></li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <div class="contact-info">
+            <img src="assets/img/ImagenPersonal.jpg" alt="Carlos Carpe Icon">
+            <div style="margin-top: 1rem;">
+            <h2 style="margin-bottom: 0px;">Carlos Carpe Gómez</h2>
+            <p style="margin-bottom: 5px;">ccarpegmez@gmail.com</p>
+            <p style="margin: 0;">+34 655 205 284</p>
+            </div>
+        </div>
+        <div>
+            <h3>
+            Carlos Carpe is a passionate Story Artist who has been learning and growing in the world of film and animation since 2021. His work stands out for using thumbnails as a key tool to bring ideas to life. He truly believes that a good story can create real emotions in the audience — and that’s what he aims for from the very first sketch.
+            <br><br>
+            He studied 3D Animation at ESI Murcia, but soon realized that his real passion was building stories from the ground up. This led him to specialize in storyboarding with a Master’s degree at UTAD (Madrid), where he deepened his knowledge of visual storytelling, cinematography, and character-driven scenes.
+            <br><br>
+            Driven by a strong desire to keep growing both as an artist and a person, Carlos observes his surroundings with sensitivity, always looking for emotions and moments to turn into honest and expressive stories. When he’s not drawing, he’s probably playing padel or watching a film to keep feeding his creative vision.
+            </h3>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contacto</h2>
+        <div class="contact-form-container">
+            <form action="https://formsubmit.co/4b625a1a6214f5fe0c9860b99ad562bb" method="POST" class="contact-form">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="comentarios">Comentarios</label>
+            <textarea id="comentarios" name="comentarios" rows="5" required></textarea>
+
+            <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <button id="scrollTopBtn">
+        <img src="assets/icons/up_black.png" alt="Subir" id="scrollTopIcon">
+    </button>
+    <script src="js/script.js"></script>
+</body>
+</html>
