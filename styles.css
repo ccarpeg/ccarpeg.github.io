@@ -31,7 +31,6 @@ body {
     color: #f0f0f0;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
 }
 
 /* Navegación */
@@ -646,6 +645,11 @@ nav ul li a.active {
 
 /* Responsive para pantallas pequeñas */
 @media screen and (max-width: 768px) {
+
+    .preheader h2,
+    .preheader h1 {
+        display: none;
+    }
 
     .logo {
         padding-left: 0;
