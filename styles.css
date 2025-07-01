@@ -639,6 +639,11 @@ nav ul li a.active {
     transition: transform 0.3s ease;
 }
 
+.gallery-vert .thumbnails:hover {
+    transform: none;
+    cursor: default;
+}
+
 /* Responsive para pantallas pequeñas */
 @media screen and (max-width: 768px) {
 
@@ -722,7 +727,15 @@ nav ul li a.active {
         align-items: center;
     }
 
-    .dom-gallery .gallery {
+    #domino1 {
+        flex: 1 1 100%; /* Ocupa toda la fila */
+        display: block;
+        max-width: 49%;
+    }
+
+    .dom-gallery .gallery img:not(#domino1){
+        flex: 1 1 calc(50% - 20px);  /* 2 por fila con espacio */
+        max-width: 45%;
         flex-direction: column;
         gap: 20px;
     }
@@ -769,6 +782,11 @@ nav ul li a.active {
         flex-wrap: wrap;
         justify-content: center;
         gap: 20px;
+    }
+
+    .gallery img:not(#domino1) {
+        flex: 1 1 calc(50% - 20px);  /* 2 por fila con espacio */
+        max-width: 45%;
     }
 
     .thumbnails {
