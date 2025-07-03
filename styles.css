@@ -666,7 +666,7 @@ nav ul li a.active {
     }
 
     .name{
-        font-size: 25px;
+        font-size: 21px;
     }
 
     .menu-toggle {
@@ -763,7 +763,7 @@ nav ul li a.active {
 
     .video-container { /*Importante para el video*/
         width: 90%;
-        height: 245px;
+        height: 190px;
         max-width: 100%;
         flex: none;
     }
@@ -840,7 +840,7 @@ nav ul li a.active {
 
     #despedida{
         margin-top: 100px;
-        width: 500px;
+        width: 100%;
         height: auto;
     }
 

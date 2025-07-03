@@ -170,5 +170,14 @@ document.addEventListener("DOMContentLoaded", function () {
       menu.classList.toggle("open");
       btn.classList.toggle("active");
     });
+
+    // --> CERRAR AL HACER CLIC EN CUALQUIER OPCIÓN
+    const menuLinks = document.querySelectorAll('.right-links a[href]');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.remove('open');
+        btn.classList.remove('active');
+      });
+    });
   }
 });
